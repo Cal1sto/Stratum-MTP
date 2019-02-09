@@ -97,9 +97,9 @@ void initlog(const char *algo)
 	sprintf(debugfile, "%s.log", algo);
 	g_debuglog = fopen(debugfile, "w");
 
-	g_stratumlog = fopen("stratum.log", "a");
-	g_clientlog = fopen("client.log", "a");
-	g_rejectlog = fopen("reject.log", "a");
+	g_stratumlog = fopen("stratum-mtp.log", "a");
+	g_clientlog = fopen("client-mtp.log", "a");
+	g_rejectlog = fopen("reject-mtp.log", "a");
 }
 
 void closelogs()
@@ -225,7 +225,7 @@ void stratumlog(const char *format, ...)
 		fprintf(g_stratumlog, "%s: %s", buffer2, buffer);
 		if (fflush(g_stratumlog) == EOF) {
 			fclose(g_stratumlog);
-			g_stratumlog = fopen("stratum.log", "a");
+			g_stratumlog = fopen("stratum-mtp.log", "a");
 		}
 	}
 }
