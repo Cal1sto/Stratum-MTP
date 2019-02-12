@@ -5,7 +5,7 @@ Yiimp Stratum dedicated to MTP implementation of ZCoin
 
 # Done and untested
 
-01 - mtp algo in stratum (mtp_hash)
+01 - mtp algo in stratum (mtp_hash)<br>
 02 - include bos-jansson lib 
 
 # To be implemented
